@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Partido extends Model
 {
+    protected $table = "partidos";
     protected $fillable = ['liga_id', 'club_local_id', 'club_visitante_id', 'fecha', 'resultado'];
 
     public function liga() {
