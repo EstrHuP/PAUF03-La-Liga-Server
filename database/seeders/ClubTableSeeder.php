@@ -13,7 +13,7 @@ class ClubTableSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('Club')->insert([
+        DB::table('clubes')->insert([
             [
                 'id'=> 1,
                 'nombre'=> 'Barcelona',

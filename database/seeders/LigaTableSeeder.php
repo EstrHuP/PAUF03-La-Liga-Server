@@ -13,7 +13,7 @@ class LigaTableSeeder extends Seeder
      */
     public function run(): void
     {
-         DB::table('Liga')->insert([
+         DB::table('ligas')->insert([
             [
                 'nombre'=> 'La Liga',
                 'deporte' => 'Fútbol',

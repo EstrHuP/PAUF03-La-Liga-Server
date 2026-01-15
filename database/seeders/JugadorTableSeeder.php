@@ -13,7 +13,7 @@ class JugadorTableSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('Jugador')->insert([
+        DB::table('jugadores')->insert([
             [
                 'nombre' => 'Elena Suarez',
                 'posicion' => 'Delantera',

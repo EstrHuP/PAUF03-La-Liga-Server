@@ -13,7 +13,7 @@ class PartidoTableSeeder extends Seeder
      */
     public function run(): void
     {
-         DB::table('Partido')->insert([
+         DB::table('partidos')->insert([
             [
                 'liga_id' => 1,
                 'club_local_id' => 1,

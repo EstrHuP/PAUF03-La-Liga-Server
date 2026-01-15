@@ -11,19 +11,19 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('Partido', function (Blueprint $table) {
+        Schema::create('partidos', function (Blueprint $table) {
             $table->id();
 
             $table->foreignId('liga_id')
-                    ->constrained('Liga')
+                    ->constrained('ligas')
                     ->onDelete('cascade');
     
             $table->foreignId('club_local_id')
-                    ->constrained('Club')
+                    ->constrained('clubes')
                     ->onDelete('cascade');
 
             $table->foreignId('club_visitante_id')
-                    ->constrained('Club')
+                    ->constrained('clubes')
                     ->onDelete('cascade');
 
             $table->date('fecha');
@@ -38,6 +38,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('Partido');
+        Schema::dropIfExists('partidos');
     }
 };
