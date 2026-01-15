@@ -20,9 +20,9 @@ class LigaController extends Controller
     // POST - Crear
     public function store(Request $request) {
         $request -> validate([
-            'nombre' => 'required',
-            'deporte' => 'required',
-            'temporada' => 'required'
+            'nombre' => 'required', 'string', 'max:100',
+            'deporte' => 'required', 'string', 'max:100',
+            'temporada' => 'required', 'string', 'max:100'
         ]);
         return Liga::create($request->all()); 
     }

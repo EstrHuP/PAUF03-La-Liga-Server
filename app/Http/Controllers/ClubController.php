@@ -20,9 +20,9 @@ class ClubController extends Controller
     // POST - Crear
     public function store(Request $request) {
         $request -> validate([
-            'nombre' => 'required',
-            'ciudad' => 'required',
-            'categoria' => 'required',
+            'nombre' => 'required', 'string', 'max:100',
+            'ciudad' => 'required', 'string', 'max:100',
+            'categoria' => 'required', 'string', 'max:100'
         ]);
         return Club::create($request->all()); 
     }

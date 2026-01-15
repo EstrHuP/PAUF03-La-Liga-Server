@@ -20,10 +20,10 @@ class JugadorController extends Controller
     // POST - Crear
     public function store(Request $request) {
         $request -> validate([
-            'nombre' => 'required',
-            'posicion' => 'required',
-            'dorsal' => 'required',
-            'club_id' => 'required',
+            'nombre' => 'required', 'string', 'max:100',
+            'posicion' => 'required', 'string', 'max:100',
+            'dorsal' => 'required', 'integer', 'between:1,100',
+            'club_id' => 'required', 'integer'
         ]);
         return Jugador::create($request->all()); 
     }
